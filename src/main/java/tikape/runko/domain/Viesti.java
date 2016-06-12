@@ -5,35 +5,35 @@ import java.sql.Timestamp;
 public class Viesti {
     private Integer id;
     private String sisalto;
-    private String lahettaja;
     private Timestamp lahetysAika;
+    private String lahettaja;
     private Integer keskustelu;
-    
-    public Viesti(Integer id, String sisalto, String lahettaja, Timestamp lahetysAika, Integer keskustelu) {
+
+    public Viesti(Integer id, String sisalto, Timestamp lahetysAika, String lahettaja, Integer keskustelu) {
         this.sisalto = sisalto;
-        this.lahettaja = lahettaja;
-        this.keskustelu = keskustelu;
         this.lahetysAika = lahetysAika;
         this.id = id;
+        this.lahettaja = lahettaja;
+        this.keskustelu = keskustelu;
     }
     
     public Integer getId() {
         return id;
     }
     
-    public String getSisalto() {
-        return sisalto;
+    public Integer getKeskustelu() {
+        return keskustelu;
     }
     
-    public String getLahettaja() {
-        return lahettaja;
+    public String getSisalto() {
+        return sisalto;
     }
     
     public Timestamp getLahetysAika() {
         return lahetysAika;
     }
     
-    public Integer getKeskustelu() {
-        return keskustelu;
+    public String getLahettaja() {
+        return lahettaja;
     }
 }
